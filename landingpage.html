@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NetConnect - Global Network Solutions</title>
+
+    <meta name="description"
+          content="NetConnect provides reliable global network, cloud, connectivity and IT infrastructure solutions.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #101828;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #eaeef3;
+        }
+
+        .navbar {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #155eef;
+        }
+
+        .logo span {
+            color: #101828;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #344054;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #155eef;
+        }
+
+        .nav-btn {
+            background: #155eef;
+            color: white !important;
+            padding: 11px 20px;
+            border-radius: 8px;
+        }
+
+        .nav-btn:hover {
+            background: #004eea;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: transparent;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 720px;
+            padding-top: 76px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 27, 61, 0.96),
+                    rgba(8, 27, 61, 0.75)
+                ),
+                url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 7px 14px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.08);
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.08;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #65a9ff;
+        }
+
+        .hero p {
+            color: #d0d5dd;
+            font-size: 18px;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #155eef;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #004eea;
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background: white;
+            color: #101828;
+        }
+
+        .btn-light:hover {
+            background: #f2f4f7;
+        }
+
+        /* =========================
+           TRUST BAR
+        ========================== */
+
+        .trust {
+            padding: 25px 0;
+            border-bottom: 1px solid #eaecf0;
+            background: #fff;
+        }
+
+        .trust-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-text {
+            color: #667085;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .network-logos {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .network-logos img {
+            width: 100px;
+            height: 40px;
+            object-fit: contain;
+            filter: grayscale(1);
+            opacity: .65;
+        }
+
+        /* =========================
+           COMMON SECTION
+        ========================== */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-heading .small-title {
+            color: #155eef;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            color: #667085;
+            font-size: 16px;
+        }
+
+        /* =========================
+           NETWORK IMAGE SECTION
+        ========================== */
+
+        .network-section {
+            background: #f8fafc;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .network-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eaecf0;
+            transition: .35s;
+        }
+
+        .network-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 20px 40px rgba(16, 24, 40, .1);
+        }
+
+        .network-card-image {
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .network-card-image img {
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .network-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .network-card-content {
+            padding: 25px;
+        }
+
+        .network-card-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .network-card-content p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .experience-box {
+            position: absolute;
+            right: -25px;
+            bottom: 30px;
+            background: white;
+            padding: 24px;
+            border-radius: 14px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.15);
+        }
+
+        .experience-box strong {
+            display: block;
+            font-size: 32px;
+            color: #155eef;
+        }
+
+        .experience-box span {
+            color: #667085;
+            font-size: 13px;
+        }
+
+        .about-content .small-title {
+            color: #155eef;
+            font-weight: 800;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-content h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin: 15px 0 20px;
+        }
+
+        .about-content > p {
+            color: #667085;
+            margin-bottom: 25px;
+        }
+
+        .check-list li {
+            margin: 13px 0;
+            font-weight: 600;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #155eef;
+            font-weight: 800;
+            margin-right: 10px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: #f8fafc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            padding: 32px;
+            background: white;
+            border: 1px solid #eaecf0;
+            border-radius: 15px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #b2ccff;
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #eaf2ff;
+            color: #155eef;
+            font-size: 25px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            background: #081b3d;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat {
+            padding: 20px;
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat h3 {
+            font-size: 42px;
+            margin-bottom: 5px;
+        }
+
+        .stat p {
+            color: #b8c5da;
+            font-size: 14px;
+        }
+
+        /* =========================
+           GLOBAL NETWORK
+        ========================== */
+
+        .global-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .global-content h2 {
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .global-content p {
+            color: #667085;
+            margin-bottom: 25px;
+        }
+
+        .global-map {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .global-map img {
+            height: 430px;
+            object-fit: cover;
+        }
+
+        .location {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: #155eef;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 8px rgba(21,94,239,.2);
+            animation: pulse 2s infinite;
+        }
+
+        .location.one {
+            top: 36%;
+            left: 27%;
+        }
+
+        .location.two {
+            top: 47%;
+            left: 52%;
+        }
+
+        .location.three {
+            top: 60%;
+            left: 67%;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 5px rgba(21,94,239,.2);
+            }
+
+            50% {
+                box-shadow: 0 0 0 12px rgba(21,94,239,.05);
+            }
+        }
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta {
+            padding: 80px 0;
+        }
+
+        .cta-box {
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(21,94,239,.95),
+                    rgba(8,27,61,.95)
+                ),
+                url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+            padding: 70px;
+            border-radius: 22px;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta-box p {
+            color: #d9e2f2;
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #061329;
+            color: white;
+            padding: 70px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-brand p {
+            color: #98a8c0;
+            margin-top: 15px;
+            max-width: 330px;
+            font-size: 14px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 20px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #98a8c0;
+            font-size: 14px;
+            margin: 12px 0;
+            transition: .3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            margin-top: 50px;
+            padding-top: 25px;
+            color: #8090a8;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                position: absolute;
+                top: 76px;
+                left: 0;
+                width: 100%;
+                background: white;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px 5%;
+                box-shadow: 0 15px 30px rgba(0,0,0,.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .network-grid,
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .global-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0;
+            }
+
+            .stat {
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .network-grid,
+            .service-grid,
+            .stats-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2,
+            .global-content h2,
+            .cta-box h2 {
+                font-size: 32px;
+            }
+
+            .about-image img {
+                height: 350px;
+            }
+
+            .experience-box {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .cta-box {
+                padding: 45px 25px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .trust-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .network-logos {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================== -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+            Net<span>Connect</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#network">Network</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#coverage">Coverage</a>
+            <a href="#contact" class="nav-btn">Contact Us</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                🌐 Global Network Infrastructure
+            </span>
+
+            <h1>
+                Connecting Your
+                <span>Business</span>
+                To The World
+            </h1>
+
+            <p>
+                Powerful, secure and reliable network solutions
+                designed to connect your business, people and
+                applications from anywhere in the world.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Get Started →
+                </a>
+
+                <a href="#network" class="btn btn-light">
+                    Explore Network
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRUST / NETWORK LOGOS
+========================== -->
+
+<div class="trust">
+
+    <div class="container trust-content">
+
+        <div class="trust-text">
+            Trusted technology ecosystem
+        </div>
+
+        <div class="network-logos">
+
+            <img src="https://cdn.simpleicons.org/cisco" alt="Cisco">
+
+            <img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare">
+
+            <img src="https://cdn.simpleicons.org/amazon" alt="Amazon">
+
+            <img src="https://cdn.simpleicons.org/googlecloud" alt="Google Cloud">
+
+            <img src="https://cdn.simpleicons.org/microsoft" alt="Microsoft">
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     NETWORK
+========================== -->
+
+<section class="network-section" id="network">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                Our Network
+            </div>
+
+            <h2>
+                Built For Modern Connectivity
+            </h2>
+
+            <p>
+                Our infrastructure combines high-performance
+                networking, cloud connectivity and secure
+                infrastructure to keep your business connected.
+            </p>
+
+        </div>
+
+
+        <div class="network-grid">
+
+            <div class="network-card">
+
+                <div class="network-card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+                        alt="Data Center Network">
+                </div>
+
+                <div class="network-card-content">
+                    <h3>Data Center Network</h3>
+
+                    <p>
+                        Reliable infrastructure designed for
+                        high availability and performance.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <div class="network-card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                        alt="Business Connectivity">
+                </div>
+
+                <div class="network-card-content">
+                    <h3>Business Connectivity</h3>
+
+                    <p>
+                        Connect teams, offices and applications
+                        securely from anywhere.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="network-card">
+
+                <div class="network-card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                        alt="Cloud Network">
+                </div>
+
+                <div class="network-card-content">
+                    <h3>Cloud Infrastructure</h3>
+
+                    <p>
+                        Modern cloud solutions built for
+                        scalability and flexibility.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=85"
+                    alt="Network Technology">
+
+                <div class="experience-box">
+                    <strong>15+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="small-title">
+                    Why NetConnect
+                </div>
+
+                <h2>
+                    Technology That Keeps Your Business Moving
+                </h2>
+
+                <p>
+                    We provide dependable networking and technology
+                    infrastructure that helps businesses stay
+                    connected, secure and productive.
+                </p>
+
+                <ul class="check-list">
+
+                    <li>High-performance network infrastructure</li>
+
+                    <li>Secure business connectivity</li>
+
+                    <li>Cloud and data center integration</li>
+
+                    <li>24/7 network monitoring</li>
+
+                    <li>Scalable technology solutions</li>
+
+                </ul>
+
+                <br>
+
+                <a href="#contact" class="btn btn-primary">
+                    Talk To Our Team
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="small-title">
+                What We Do
+            </div>
+
+            <h2>
+                Complete Network Solutions
+            </h2>
+
+            <p>
+                Everything your business needs to build,
+                manage and scale a modern network.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>Network Solutions</h3>
+
+                <p>
+                    Enterprise-grade network architecture
+                    designed for speed, security and reliability.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ☁
+                </div>
+
+                <h3>Cloud Connectivity</h3>
+
+                <p>
+                    Connect your applications and infrastructure
+                    with modern cloud platforms.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🔒
+                </div>
+
+                <h3>Network Security</h3>
+
+                <p>
+                    Protect your network and data with
+                    secure infrastructure and monitoring.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <h3>High Performance</h3>
+
+                <p>
+                    Optimized network infrastructure for
+                    fast and reliable business operations.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🖥
+                </div>
+
+                <h3>Data Center</h3>
+
+                <p>
+                    Reliable data center connectivity and
+                    infrastructure solutions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📊
+                </div>
+
+                <h3>Network Monitoring</h3>
+
+                <p>
+                    Continuous monitoring helps identify
+                    issues before they impact your business.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================== -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <h3 data-target="99">0</h3>
+                <p>% Network Uptime</p>
+            </div>
+
+            <div class="stat">
+                <h3 data-target="150">0</h3>
+                <p>+ Global Locations</p>
+            </div>
+
+            <div class="stat">
+                <h3 data-target="500">0</h3>
+                <p>+ Business Clients</p>
+            </div>
+
+            <div class="stat">
+                <h3 data-target="24">0</h3>
+                <p>/7 Network Monitoring</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GLOBAL COVERAGE
+========================== -->
+
+<section id="coverage">
+
+    <div class="container">
+
+        <div class="global-grid">
+
+            <div class="global-content">
+
+                <div class="section-heading" style="text-align:left;margin:0 0 25px;">
+
+                    <div class="small-title">
+                        Global Coverage
+                    </div>
+
+                    <h2>
+                        Connected Across The Globe
+                    </h2>
+
+                </div>
+
+                <p>
+                    Build reliable connections between your
+                    offices, employees, applications and customers
+                    with a network designed for global operations.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">
+                    Explore Coverage
+                </a>
+
+            </div>
+
+
+            <div class="global-map">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524666041070-9a8760c8a8e5?auto=format&fit=crop&w=1200&q=85"
+                    alt="Global Network Map">
+
+                <span class="location one"></span>
+                <span class="location two"></span>
+                <span class="location three"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================== -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>
+                Ready To Connect?
+            </h2>
+
+            <p>
+                Let's build a reliable, secure and scalable
+                network infrastructure for your business.
+            </p>
+
+            <a href="mailto:hello@example.com"
+               class="btn btn-light">
+                Contact Us Today →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    Net<span style="color:white;">Connect</span>
+                </a>
+
+                <p>
+                    Reliable network and technology solutions
+                    designed to connect modern businesses
+                    with the world.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#coverage">Coverage</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Services</h4>
+
+                <a href="#services">Network Solutions</a>
+                <a href="#services">Cloud Connectivity</a>
+                <a href="#services">Network Security</a>
+                <a href="#services">Data Center</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Contact</h4>
+
+                <a href="mailto:hello@example.com">
+                    hello@example.com
+                </a>
+
+                <a href="tel:+919876543210">
+                    +91 98765 43210
+                </a>
+
+                <a href="#">
+                    New Delhi, India
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © <span id="year"></span> NetConnect. All rights reserved.
+            </div>
+
+            <div>
+                Privacy Policy &nbsp; | &nbsp; Terms
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+
+        if (navLinks.classList.contains("active")) {
+            menuBtn.innerHTML = "✕";
+        } else {
+            menuBtn.innerHTML = "☰";
+        }
+    });
+
+
+    /* Close menu after clicking link */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+
+            menuBtn.innerHTML = "☰";
+
+        });
+
+    });
+
+
+    /* =========================
+       COUNTER ANIMATION
+    ========================== */
+
+    const counters = document.querySelectorAll("[data-target]");
+
+    let counterStarted = false;
+
+    function startCounters() {
+
+        if (counterStarted) return;
+
+        const statsSection = document.querySelector(".stats");
+
+        const position = statsSection.getBoundingClientRect();
+
+        if (position.top < window.innerHeight - 100) {
+
+            counterStarted = true;
+
+            counters.forEach(function(counter) {
+
+                const target = Number(counter.dataset.target);
+
+                let current = 0;
+
+                const increment = Math.max(
+                    1,
+                    Math.ceil(target / 60)
+                );
+
+                const timer = setInterval(function() {
+
+                    current += increment;
+
+                    if (current >= target) {
+
+                        counter.innerText = target;
+
+                        clearInterval(timer);
+
+                    } else {
+
+                        counter.innerText = current;
+
+                    }
+
+                }, 25);
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener("scroll", startCounters);
+
+    startCounters();
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================
+       HEADER SHADOW
+    ========================== */
+
+    window.addEventListener("scroll", function() {
+
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 30) {
+
+            header.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,0.08)";
+
+        } else {
+
+            header.style.boxShadow = "none";
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
